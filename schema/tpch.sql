@@ -98,11 +98,11 @@ CREATE TABLE [dbo].[supplier](
 ) ON [PRIMARY]
 GO
 
-BULK INSERT part FROM '/home/nghia/Documents/tpch_2.18.0_rc2/dbgen/part.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
-BULK INSERT customer FROM '/home/nghia/Documents/tpch_2.18.0_rc2/dbgen/customer.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
-BULK INSERT orders FROM '/home/nghia/Documents/tpch_2.18.0_rc2/dbgen/orders.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
-BULK INSERT partsupp FROM '/home/nghia/Documents/tpch_2.18.0_rc2/dbgen/partsupp.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
-BULK INSERT supplier FROM '/home/nghia/Documents/tpch_2.18.0_rc2/dbgen/supplier.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
-BULK INSERT lineitem FROM '/home/nghia/Documents/tpch_2.18.0_rc2/dbgen/lineitem.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
-BULK INSERT nation FROM '/home/nghia/Documents/tpch_2.18.0_rc2/dbgen/nation.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
-BULK INSERT region FROM '/home/nghia/Documents/tpch_2.18.0_rc2/dbgen/region.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
+BULK INSERT part FROM '/memverge/home/bhanus/Projects/TPC-H-Dataset-Generator-MS-SQL-Server/dbgen/part.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
+BULK INSERT customer FROM '/memverge/home/bhanus/Projects/TPC-H-Dataset-Generator-MS-SQL-Server/dbgen/customer.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
+BULK INSERT orders FROM '/memverge/home/bhanus/Projects/TPC-H-Dataset-Generator-MS-SQL-Server/dbgen/orders.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
+BULK INSERT partsupp FROM '/memverge/home/bhanus/Projects/TPC-H-Dataset-Generator-MS-SQL-Server/dbgen/partsupp.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
+BULK INSERT supplier FROM '/memverge/home/bhanus/Projects/TPC-H-Dataset-Generator-MS-SQL-Server/dbgen/supplier.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
+BULK INSERT lineitem FROM '/memverge/home/bhanus/Projects/TPC-H-Dataset-Generator-MS-SQL-Server/dbgen/lineitem.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
+BULK INSERT nation FROM '/memverge/home/bhanus/Projects/TPC-H-Dataset-Generator-MS-SQL-Server/dbgen/nation.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')
+BULK INSERT region FROM '/memverge/home/bhanus/Projects/TPC-H-Dataset-Generator-MS-SQL-Server/dbgen/region.tbl' WITH (TABLOCK, DATAFILETYPE='char', CODEPAGE='raw', FIELDTERMINATOR = '|')

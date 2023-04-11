@@ -41,8 +41,14 @@ sqlcmd -S <server_ip> -U <username> -P <password> -i schema/tpch_fk.sql
 
 ### Generating the queries
 ```
+Set the environmant variable to one of
+export DSS_QUERY=./queries_filtered_0
+export DSS_QUERY=./queries_filtered_1
+export DSS_QUERY=./queries_filtered_2
+export DSS_QUERY=./queries_filtered_original
+export DSS_QUERY=./queries_filtered_simplified
 cd ..
-python3 gen_queries.py -u <db admin> -p <password> --num_queries <number of queries per template> --test_split <the percentage of templates to use in test set>
+python3 gen_queries.py -U <db admin> -P <password> --num_queries <number of queries per template> --test_split <the percentage of templates to use in test set>
 ```
 The result is stored in `dbgen/generated_queries`
 

@@ -5,7 +5,7 @@ import subprocess
 import random
 from pathlib import Path
 
-from utils import extract_tables_columns
+from dataset_generation.utils import extract_tables_columns
 
 
 """
@@ -24,6 +24,7 @@ def generate_queries(indices, args, split, directory='.'):
             directory = f"./generated_queries/{split}/{template}/"
             file_path = directory+f"{str(count)}.sql"
             Path(directory).mkdir(parents=True, exist_ok=True)
+            # print(file_path)
             subprocess.call('touch ' + file_path, shell=True)
             shell_cmd = f'./qgen {str(template)} -r {(count + 1) * 100} -s 1000 > {file_path}'
             # print(shell_cmd)
