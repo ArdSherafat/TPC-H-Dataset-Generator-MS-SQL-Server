@@ -16,3 +16,5 @@ generated_showplans/*
 dataset_generation/generated_equivalent_showplans*/
 queries/imdbload_backup/
 generated_queries_tpcds/
+dbgen/dbgen
+dbgen/qgen
