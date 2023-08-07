@@ -41,7 +41,7 @@ def run_queries(indices, args, directory='.'):
             input_directory = f"/var/opt/mssql/import/dbgen/generated_queries/{template}/"
             input_path = input_directory + f"{str(count)}.sql"
             
-            directory = f"./generated_showplans/run/{template}/"
+            directory = f"./run_queries/{template}/"
             d2 = f"/var/opt/mssql/import/dbgen/run_queries/{template}/"
 
             output_path = directory + str(count) + '.txt'
@@ -58,7 +58,7 @@ def run_queries(indices, args, directory='.'):
 if __name__ == "__main__":
     os.chdir('./dbgen')
     print(os.getcwd())
-    NUM_TEMPLATES = 3
+    NUM_TEMPLATES = 22
 
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument(
