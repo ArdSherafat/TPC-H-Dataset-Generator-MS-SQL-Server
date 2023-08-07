@@ -64,7 +64,7 @@ if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument(
         "-U", "--user", help="db administrator", default="SA")
-    arg_parser.add_argument("-P", "--password", help="password")
+    arg_parser.add_argument("-P", "--password", help="password", default="Memverge#123")
     arg_parser.add_argument("--num_queries",
                             help="Number of queries to generate per template", type=int)
     arg_parser.add_argument(
