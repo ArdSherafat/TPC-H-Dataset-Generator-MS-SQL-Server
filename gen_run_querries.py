@@ -28,7 +28,7 @@ def generate_queries(indices, args, directory='.'):
             Path(directory).mkdir(parents=True, exist_ok=True)
             # print(file_path)
             subprocess.call('touch ' + file_path, shell=True)
-            shell_cmd = f'./qgen {str(template)} -r {(count + 1) * 100} -s 1 > {file_path}'
+            shell_cmd = f'./qgen {str(template)} -r {(count + 1) * 100} -s 100 > {file_path}'
             # print(shell_cmd)
             subprocess.call(shell_cmd, shell=True)
     print()
@@ -37,11 +37,12 @@ def generate_queries(indices, args, directory='.'):
 
 def run_queries(indices, args, directory='.'):
     """run queries"""
-    print("sleep for 10 seconds")
-    time.sleep(10) 
-    print("run query!")
+
     for template in indices:
         for count in range(args.num_queries):
+            print("sleep for 30 seconds")
+            time.sleep(30) 
+            print("run query!")
             input_directory = f"/data/tpch-repo/dbgen/generated_queries/{template}/"
             input_path = input_directory + f"{str(count)}.sql"
             
