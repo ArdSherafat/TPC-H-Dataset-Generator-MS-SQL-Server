@@ -38,11 +38,11 @@ def run_queries(indices, args, directory='.'):
     """run queries"""
     for template in indices:
         for count in range(args.num_queries):
-            input_directory = f"/data/tpch-schema/dbgen/generated_queries/{template}/"
+            input_directory = f"/data/tpch-repo/dbgen/generated_queries/{template}/"
             input_path = input_directory + f"{str(count)}.sql"
             
             directory = f"./run_queries/{template}/"
-            d2 = f"/data/tpch-schema//dbgen/run_queries/{template}/"
+            d2 = f"/data/tpch-repo/dbgen/run_queries/{template}/"
 
             output_path = directory + str(count) + '.txt'
             out2 = d2 + str(count) + '.txt'
