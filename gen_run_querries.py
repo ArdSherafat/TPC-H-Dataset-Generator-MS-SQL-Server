@@ -5,6 +5,7 @@ import random
 import argparse
 import subprocess
 import random
+import time
 from pathlib import Path
 
 from dataset_generation.utils import extract_tables_columns
@@ -36,6 +37,9 @@ def generate_queries(indices, args, directory='.'):
 
 def run_queries(indices, args, directory='.'):
     """run queries"""
+    print("sleep for 10 seconds")
+    time.sleep(10) 
+    print("run query!")
     for template in indices:
         for count in range(args.num_queries):
             input_directory = f"/data/tpch-repo/dbgen/generated_queries/{template}/"
