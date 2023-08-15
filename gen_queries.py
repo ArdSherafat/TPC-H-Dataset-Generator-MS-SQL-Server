@@ -28,7 +28,7 @@ def generate_queries(indices, args, split, directory='.'):
             Path(directory).mkdir(parents=True, exist_ok=True)
             # print(file_path)
             subprocess.call('touch ' + file_path, shell=True)
-            shell_cmd = f'./qgen {str(template)} -r {(count + 1) * 100} -s 1 > {file_path}'
+            shell_cmd = f'./qgen {str(template)} -r {(count + 1) * 100} -s 100 > {file_path}'
             # print(shell_cmd)
             subprocess.call(shell_cmd, shell=True)
     print()
@@ -49,9 +49,8 @@ def generate_showplans(indices, args, split, directory='.'):
             Path(directory).mkdir(parents=True, exist_ok=True)
             # subprocess.call('touch ' + output_path, shell=True)
             subprocess.call('touch ' + output_path + ' && chmod 666 ' + output_path, shell=True)
-            shell_cmd = f'docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S {args.server} -U {args.user} -P {args.password} -d TPCH -i {input_path} -o {out2}'
+            shell_cmd = f'docker exec -it mssql /opt/mssql-tools/bin/sqlcmd -S {args.server} -U {args.user} -P {args.password} -d TPCH -i {input_path} -o {out2}'
 
-            #shell_cmd = f'sqlcmd -S {args.server} -U {args.user} -P {args.password} -d TPCH -i {input_path} -o {output_path}'
             # print(shell_cmd)
             subprocess.call(shell_cmd, shell=True)
 

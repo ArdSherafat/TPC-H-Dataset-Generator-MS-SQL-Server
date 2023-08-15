@@ -4,8 +4,7 @@
 -- Approved February 1998
 :x
 :o
-set showplan_all on;
-go
+
 
 select
 	sum(l_extendedprice) / 7.0 as avg_yearly

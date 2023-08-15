@@ -5,8 +5,6 @@
 :x
 :o
 
-set showplan_all on;
-go
 
 select
 	l_shipmode,
